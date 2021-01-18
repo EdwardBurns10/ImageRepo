@@ -33,20 +33,18 @@ export default database => {
       });
     });
 
-  const login = (login, pass) =>
-    database.login(login, pass).then(({ ok, ...rest }) => {
-      emitter.emit("login", rest);
-      return rest;
-    });
-
-  const logout = () =>
-    database.logout().then(() => {
-      emitter.emit("logout");
-    });
+  // const login = (login, pass) =>
+  //   database.login(login, pass).then(({ ok, ...rest }) => {
+  //     emitter.emit("login", rest);
+  //     return rest;
+  //   });
+  //
+  // const logout = () =>
+  //   database.logout().then(() => {
+  //     emitter.emit("logout");
+  //   });
 
   return {
-    login,
-    logout,
     getUser,
     requireUser,
     userStateListener

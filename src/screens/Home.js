@@ -52,7 +52,7 @@ export const Home = () => {
         </EuiHeaderSection>
         <EuiHeaderSection side="right">
           <EuiHeaderLinks>
-            <EuiHeaderLink onClick={auth.logout}>LOGOUT</EuiHeaderLink>
+            {/*<EuiHeaderLink onClick={auth.logout}>LOGOUT</EuiHeaderLink>*/}
           </EuiHeaderLinks>
           <EuiHeaderSectionItem border="none">
             <EuiHeaderSectionItemButton onClick={() => setIForm({})}>
